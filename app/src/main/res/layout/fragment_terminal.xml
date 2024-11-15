@@ -2,43 +2,155 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:orientation="vertical"
+    tools:ignore="ExtraText">
+    <!-- TextView لعرض البيانات المستلمة -->
     <TextView
         android:id="@+id/receive_text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:freezesText="true"
-        android:gravity="bottom"
-        android:scrollbars="vertical"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:layout_height="100dp"
 
-    <View
-        android:layout_width="match_parent"
-        android:background="?android:attr/listDivider"
-        android:layout_height="2dp" />
+    android:ellipsize="end"
+    android:background="#E0E0E0"
+    android:padding="8dp"
+    android:scrollbars="vertical"
+    android:textColor="#000000"
+    android:textSize="16sp" />
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="8dp">
 
-        <EditText
-            android:id="@+id/send_text"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:inputType="text|textNoSuggestions"
-            android:singleLine="true" />
-
-        <ImageButton
-            android:id="@+id/send_btn"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/value1_label"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_send_white_24dp" />
+            android:layout_weight="1"
+            android:text="Value1="
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/value2_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Value2="
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/value3_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Value3="
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/value4_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Value4="
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+
+
+    <!-- أزرار الأواني (POT1، POT2، POT3، POT4) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/pot1_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:background="@color/default_button_color"
+
+            android:text="POT1" />
+
+        <Button
+            android:id="@+id/pot2_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:background="@color/default_button_color"
+
+            android:text="POT2" />
+
+        <Button
+            android:id="@+id/pot3_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:background="@color/default_button_color"
+
+            android:text="POT3" />
+
+        <Button
+            android:id="@+id/pot4_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="8sp"
+            android:background="@color/default_button_color"
+
+            android:text="POT4" />
+    </LinearLayout>
+
+    <!-- أزرار التحكم "+" و "-" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/decrease_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/increase_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+" />
     </LinearLayout>
 
 </LinearLayout>
